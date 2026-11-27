@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="A simple personal shortcut board for MTA bus arrivals.">
+  <title>My Bus Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="site-header">
+    </header>
+
+    <section id="origin-section" class="section" aria-labelledby="origin-heading">
+      <div class="section-heading">
+        <div>
+          <p class="step-label">1</p>
+          <h2 id="origin-heading">Starting Point</h2>
+        </div>
+      </div>
+      <div id="origin-cards" class="card-grid origin-grid"></div>
+    </section>
+
+    <section id="destination-section" class="section" aria-labelledby="destination-heading">
+      <div class="section-heading">
+        <div>
+          <p class="step-label">2</p>
+          <h2 id="destination-heading">Destination</h2>
+          <p id="selected-origin-label" class="section-note">Choose a starting point to see destinations.</p>
+        </div>
+      </div>
+      <div id="destination-cards" class="card-grid destination-grid"></div>
+      <p id="no-destinations" class="empty-state">Choose a starting point to see available destinations.</p>
+    </section>
+
+    <section id="option-section" class="section" aria-labelledby="option-heading">
+      <div class="section-heading">
+        <div>
+          <p class="step-label">3</p>
+          <h2 id="option-heading">Bus Options</h2>
+          <p id="selected-journey-label" class="section-note"></p>
+        </div>
+      </div>
+      <div id="option-cards" class="card-grid"></div>
+      <p id="no-options" class="empty-state">Choose a destination to see bus options.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>This site is a shortcut board. Arrival information opens on MTA Bus Time. 
+        <br>
+        <a href="https://bustime.mta.info/" target="_blank" rel="noopener noreferrer">Open MTA Bus Time ↗</a>
+      </p>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
